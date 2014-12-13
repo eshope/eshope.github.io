@@ -6,7 +6,6 @@ function notifyme(){
     jQuery.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
-
         data: {
             'key': 'jyBQcgOT1KWpK6ELXRk-jA',
             'message': {
@@ -24,6 +23,8 @@ function notifyme(){
             }
         }
     }).done(function(response) {
-        console.log(response); // if you're into that sorta thing
+
+        swal("Congratulations", "You have subscribed with us we will intimate you as soon as our site is available", "success")
     });
+
 }
