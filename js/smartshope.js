@@ -3,7 +3,7 @@
  */
 function notifyme(){
     var to=$(".email").val();
-    JQuery.ajax({
+    jQuery.ajax({
         type:"GET",
         url:"http://tracker.cybergen.in/trackuser/1001?EVTNAME=subscribed&USRNAME="+to
     }).done(function(response){
