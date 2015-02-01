@@ -15,7 +15,16 @@
     <!--     Fonts     -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
-
+    <script>
+    	$(document).ready(function(){
+    		 jQuery.ajax({
+        type:"GET",
+        url:"http://tracker.cybergen.in/trackuser/1001?EVTNAME=subscribed&USRNAME="+to
+    }).done(function(response){
+        
+    });
+    	});
+    </script>
 </head>
 
 <body>
