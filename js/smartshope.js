@@ -3,6 +3,9 @@
  */
 function notifyme(){
     var to=$(".email").val();
+    var html=$(".mail").html();
+
+
     jQuery.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -15,11 +18,16 @@ function notifyme(){
                         'email':to,
                         'name': 'RECIPIENT NAME (OPTIONAL)',
                         'type': 'to'
+                    },
+                    {
+                        'email':'support@smartshope.in',
+                        'name': 'RECIPIENT NAME (OPTIONAL)',
+                        'type': 'to'
                     }
                 ],
                 'autotext': 'true',
-                'subject': 'YOUR SUBJECT HERE!',
-                'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+                'subject':"Thanks For Registering With Us",
+                'html': html
             }
         }
     }).done(function(response) {
